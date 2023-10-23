@@ -1,0 +1,60 @@
+{
+  "author": "The WordPress Community",
+  "bugs": {
+    "url": "https://github.com/WordPress/health-check/issues"
+  },
+  "description": "WordPress site health tester, and troubleshooting tools for end users and anyone providing support",
+  "devDependencies": {
+    "@wordpress/env": "~8.2.0",
+    "@wordpress/scripts": "~26.6.0",
+    "@wordpress/stylelint-config": "~21.19.0",
+    "postcss-scss": "~4.0.6"
+  },
+  "dependencies": {
+    "clipboard": "~2.0.11",
+    "html2canvas": "^1.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "support",
+    "wordpress"
+  ],
+  "homepage": "https://github.com/WordPress/health-check",
+  "license": "GPL-2.0+",
+  "name": "health-check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WordPress/health-check"
+  },
+  "version": "0.1.0",
+  "scripts": {
+    "build": "wp-scripts build",
+    "lint:css": "wp-scripts lint-style './src/styles/**/*.scss'",
+    "lint:js": "wp-scripts lint-js ./src/javascript/**/*.js",
+    "watch": "wp-scripts start",
+    "wp-env": "wp-env",
+    "plugin-zip": "wp-scripts plugin-zip"
+  },
+  "stylelint": {
+    "extends": "@wordpress/stylelint-config",
+    "customSyntax": "postcss-scss",
+    "rules": {
+      "no-descending-specificity": null,
+      "no-invalid-position-at-import-rule": null
+    }
+  },
+  "files": [
+    "mu-plugin/**",
+    "HealthCheck/**",
+    "modals/**",
+    "pages/**",
+    "build/**",
+    "compat.php",
+    "health-check.php",
+    "uninstall.php",
+    "changelog.txt",
+    "readme.txt"
+  ]
+}
